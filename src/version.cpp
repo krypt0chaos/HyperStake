@@ -6,7 +6,7 @@
 #include "version.h"
 
 // Client version number
-#define CLIENT_VERSION_SUFFIX   "HyperStake-1.1.4.0"
+#define CLIENT_VERSION_SUFFIX   "HyperStake-1.1.5.0"
 
 
 // The following part of the code determines the CLIENT_BUILD variable.
@@ -22,11 +22,6 @@
 //   * if not, but GIT_COMMIT is defined, use v[maj].[min].[rev].[build]-g[commit]
 //   * otherwise, use v[maj].[min].[rev].[build]-unk
 // finally CLIENT_VERSION_SUFFIX is added
-
-// First, include build.h if requested
-#ifdef HAVE_BUILD_INFO
-#    include "build.h"
-#endif
 
 // git will put "#define GIT_ARCHIVE 1" on the next line inside archives. 
 #define GIT_ARCHIVE 1

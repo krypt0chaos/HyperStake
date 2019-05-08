@@ -51,6 +51,7 @@ BITCOIN_CORE_H = \
   key.h \
   keystore.h \
   main.h \
+  miner.h \
   mruset.h \
   netbase.h \
   net.h \
@@ -79,7 +80,13 @@ BITCOIN_CORE_H = \
   util.h \
   version.h \
   wallet.h \
-  walletdb.h
+  walletdb.h \
+  voteproposalmanager.h \
+  voteproposal.h \
+  voteobject.h \
+  votecharset.h \
+  votetally.h
+
 
 JSON_H = \
   json/json_spirit.h \
@@ -118,6 +125,7 @@ libbitcoin_server_a_SOURCES = \
   kernel.cpp \
   luffa.c \
   main.cpp \
+  miner.cpp \
   net.cpp \
   noui.cpp \
   rpcblockchain.cpp \
@@ -126,6 +134,11 @@ libbitcoin_server_a_SOURCES = \
   rpcrawtransaction.cpp \
   script.cpp \
   scrypt.cpp \
+  voteproposalmanager.cpp \
+  voteproposal.cpp \
+  voteobject.cpp \
+  votetally.cpp \
+  votecharset.cpp \
   shavite.c \
   simd.c \
   skein.c \
@@ -145,6 +158,8 @@ libbitcoin_wallet_a_SOURCES = \
   scrypt.cpp \
   wallet.cpp \
   walletdb.cpp \
+  voteobject.cpp \
+  votetally.cpp \
   $(BITCOIN_CORE_H)
 
 # common: shared between bitcoind, and bitcoin-qt and non-server tools
